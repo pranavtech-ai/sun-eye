@@ -265,6 +265,19 @@
     .review-card h3{margin-top:13px;font-family:var(--serif);font-size:1.7rem;font-weight:400;line-height:1.08}
     .review-card p{margin-top:10px;color:var(--muted);font-size:.86rem;line-height:1.7}
 
+    /* MOBILE REVIEWS ONLY */
+    @media (max-width: 759px){
+      .reviews-head{align-items:stretch;gap:28px}
+      .reviews-head > div:first-child{width:100%}
+      .reviews-head .h2{max-width:none;width:100%;font-size:clamp(2.35rem,10.5vw,3.35rem);line-height:1;letter-spacing:-.035em}
+      .review-summary{min-width:0;width:100%;justify-items:start}
+      .review-score{font-size:clamp(2.8rem,12vw,3.8rem)}
+      .review-summary .text-link{width:auto}
+      .review-cards{grid-template-columns:1fr;gap:12px}
+      .review-card{padding:22px 20px;border-radius:20px}
+      .review-card h3{font-size:1.55rem;line-height:1.08}
+    }
+
     /* CONTACT */
     .contact-grid{display:grid;gap:34px}
     .contact-copy .h2{margin-top:17px}
@@ -480,7 +493,7 @@
           <span class="eyebrow reveal">Consultation</span>
           <h2 class="h2 reveal" data-delay="60">Dr. Chintan Gandhi (M.D)</h2>
           <p class="doctor-role reveal" data-delay="100">Doctor at Sun Eye Hospital</p>
-          <p class="body-copy reveal" data-delay="140">Patients at Sun Eye Hospital are seen by Dr. Chintan Gandhi. The consultation style is calm and explanatory - time is taken to answer questions before the next decision is made.</p>
+          <p class="body-copy reveal" data-delay="140">Patients at Sun Eye Hospital are seen by Dr. Chintan Gandhi. The consultation style is calm and explanatory — time is taken to answer questions before the next decision is made.</p>
           <div class="doctor-points">
             <div class="doctor-point reveal"><span>Hospital</span><strong>Sun Eye Hospital</strong></div>
             <div class="doctor-point reveal" data-delay="60"><span>Location</span><strong>Bilimora, Gujarat</strong></div>
