@@ -14,7 +14,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -50,8 +50,8 @@
       --white:#FFFFFF;
       --line:rgba(24,36,37,.12);
       --line-soft:rgba(24,36,37,.065);
-      --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
-      --sans:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      --serif:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      --sans:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
       --radius:18px;
       --radius-lg:30px;
       --shadow:0 24px 70px -38px rgba(24,36,37,.40);
@@ -115,11 +115,6 @@
     .btn-light:hover{transform:translateY(-3px);box-shadow:0 18px 32px -22px rgba(0,0,0,.5)}
     .btn svg{flex:none}
 
-    .top-strip{background:var(--ink);color:rgba(247,250,248,.8);font-size:.72rem;letter-spacing:.02em}
-    .top-strip-inner{min-height:36px;display:flex;align-items:center;justify-content:space-between;gap:14px}
-    .top-strip a{color:#fff;font-weight:700}
-    .top-strip .hours{display:none}
-
     .site-header{position:sticky;top:0;z-index:100;border-bottom:1px solid transparent;background:rgba(247,250,248,.78);backdrop-filter:blur(18px);transition:background .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease)}
     .site-header.scrolled{background:rgba(247,250,248,.91);border-color:var(--line);box-shadow:0 16px 36px -34px rgba(24,36,37,.6)}
     .header-inner{height:72px;display:flex;align-items:center;gap:20px}
@@ -149,7 +144,7 @@
     .mobile-menu-head{display:flex;justify-content:space-between;align-items:center;height:54px}
     .mobile-close{width:46px;height:46px;border:1px solid var(--line);border-radius:50%;background:transparent;font-size:1.1rem}
     .mobile-links{margin:auto 0;display:grid;gap:2px}
-    .mobile-links a{display:flex;align-items:baseline;justify-content:space-between;padding:15px 0;border-bottom:1px solid var(--line-soft);font-family:var(--serif);font-size:clamp(2rem,9vw,3rem);line-height:1.05}
+    .mobile-links a{display:flex;align-items:baseline;justify-content:flex-start;padding:15px 0;border-bottom:1px solid var(--line-soft);font-family:var(--serif);font-size:clamp(2rem,9vw,3rem);line-height:1.05}
     .mobile-links small{font-family:var(--sans);font-size:.62rem;font-weight:800;letter-spacing:.2em;color:var(--sage)}
     .mobile-foot{display:grid;gap:10px}
 
@@ -199,7 +194,7 @@
     .section-head .body-copy{margin-top:2px}
 
     .services-grid{display:grid;gap:12px}
-    .service-card{position:relative;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:start;padding:20px 18px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.42);transition:transform .45s var(--ease),box-shadow .45s var(--ease),background .45s var(--ease),border-color .45s var(--ease)}
+    .service-card{position:relative;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:start;padding:20px 18px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.42);transition:transform .45s var(--ease),box-shadow .45s var(--ease),background .45s var(--ease),border-color .45s var(--ease)}
     .service-card:hover{transform:translateX(5px);background:#fff;border-color:rgba(43,122,120,.22);box-shadow:var(--shadow-sm)}
     .service-num{font-family:var(--serif);font-size:1.05rem;color:var(--teal);padding-top:2px}
     .service-card h3{font-family:var(--serif);font-size:1.55rem;font-weight:400;line-height:1.05}
@@ -276,6 +271,8 @@
     .form-note{font-size:.68rem;color:var(--muted);line-height:1.55}
     .map{margin-top:16px;min-height:290px;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-sm);background:var(--aqua)}
     .map iframe{display:block;width:100%;height:100%;min-height:290px;border:0;filter:saturate(.82) contrast(.98)}
+    .footer-map{margin-top:18px;min-height:190px;height:190px;border-radius:16px;box-shadow:none}
+    .footer-map iframe{height:190px;min-height:190px}
 
     /* FOOTER */
     footer{background:var(--ink);color:rgba(247,250,248,.68);padding:70px 0 30px}
@@ -304,7 +301,6 @@
       .container{width:min(1240px,100% - 64px)}
       .section{padding:120px 0}
       .section-sm{padding:84px 0}
-      .top-strip .hours{display:block}
       .hero{padding:66px 0 120px}
       .hero-grid{grid-template-columns:minmax(0,.92fr) minmax(420px,1.08fr);gap:72px;align-items:center}
       .hero-actions{margin-top:34px}
@@ -315,7 +311,7 @@
       .intro-grid{grid-template-columns:.82fr 1.18fr;gap:70px;align-items:center}
       .section-head{flex-direction:row;align-items:end;justify-content:space-between;gap:40px;margin-bottom:50px}
       .section-head .body-copy{max-width:48ch}
-      .service-card{grid-template-columns:50px minmax(0,1fr) auto;gap:22px;padding:28px 24px}
+      .service-card{grid-template-columns:minmax(0,1fr) auto;gap:22px;padding:28px 24px}
       .service-card h3{font-size:1.85rem}
       .statement-grid{grid-template-columns:.82fr 1.18fr;gap:80px;align-items:center}
       .principles{grid-template-columns:1fr 1fr}
@@ -348,7 +344,7 @@
       .hero-image{min-height:420px}
       .hero-float{width:calc(100% - 20px);left:10px;bottom:16px}
       .display{font-size:3.05rem}
-      .service-card{grid-template-columns:24px 1fr 34px}
+      .service-card{grid-template-columns:1fr auto}
       .service-card h3{font-size:1.35rem}
       .service-arrow{width:34px;height:34px}
       .gallery .g1{min-height:410px}
@@ -364,14 +360,6 @@
 <body>
   <div class="page-progress" aria-hidden="true"><span id="progressBar"></span></div>
   <div class="grain" aria-hidden="true"></div>
-
-  <div class="top-strip">
-    <div class="container top-strip-inner">
-      <span>Sun Eye Hospital · Bilimora, Gujarat</span>
-      <span class="hours">Open today · Closes 7:00 PM</span>
-      <a href="tel:+919106898770">091068 98770</a>
-    </div>
-  </div>
 
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
@@ -420,12 +408,12 @@
       <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
     </div>
     <nav class="mobile-links" aria-label="Mobile navigation">
-      <a href="#home" data-close-menu>Home <small>01</small></a>
-      <a href="#about" data-close-menu>About <small>02</small></a>
-      <a href="#services" data-close-menu>Services <small>03</small></a>
-      <a href="#doctor" data-close-menu>Doctor <small>04</small></a>
-      <a href="#technology" data-close-menu>Technology <small>05</small></a>
-      <a href="#contact" data-close-menu>Contact <small>06</small></a>
+      <a href="#home" data-close-menu>Home</a>
+      <a href="#about" data-close-menu>About</a>
+      <a href="#services" data-close-menu>Services</a>
+      <a href="#doctor" data-close-menu>Doctor</a>
+      <a href="#technology" data-close-menu>Technology</a>
+      <a href="#contact" data-close-menu>Contact</a>
     </nav>
     <div class="mobile-foot">
       <a class="btn btn-primary" href="#contact" data-close-menu>Book an Appointment</a>
@@ -456,7 +444,7 @@
 
         <div class="hero-visual" data-parallax="0.045">
           <figure class="media hero-image reveal">
-            <img src="https://images.pexels.com/photos/38167591/pexels-photo-38167591.jpeg?auto=compress&cs=tinysrgb&w=3840" alt="Eye examination using a slit lamp in a clinical setting" fetchpriority="high" decoding="async">
+            <img src="https://images.pexels.com/photos/6749700/pexels-photo-6749700.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Eye examination using a slit lamp in a clinical setting" fetchpriority="high" decoding="async">
           </figure>
           <div class="hero-float reveal" data-delay="180">
             <div class="hero-float-top"><span class="float-dot" aria-hidden="true"></span><span class="float-title">Patient-first eye care</span></div>
@@ -476,14 +464,14 @@
     <section class="section" id="about">
       <div class="container intro-grid">
         <div class="intro-copy">
-          <span class="eyebrow reveal"><span class="num">01</span> About Sun Eye Hospital</span>
+          <span class="eyebrow reveal">About Sun Eye Hospital</span>
           <h2 class="h2 reveal" data-delay="60">An eye hospital built around how patients actually feel.</h2>
           <p class="body-copy reveal" data-delay="120">Sun Eye Hospital is an eye-care centre on Convent Road in Goharbaug, Bilimora. The approach is simple: make good eye care feel calm, clear and personal for the people of Bilimora and the surrounding towns.</p>
         </div>
         <div class="intro-visual reveal" data-delay="100">
-          <figure class="media tall"><img src="https://images.pexels.com/photos/4266944/pexels-photo-4266944.jpeg?auto=compress&cs=tinysrgb&w=3840" alt="Doctor speaking with a patient in a modern clinic" loading="lazy" decoding="async"></figure>
+          <figure class="media tall"><img src="https://images.pexels.com/photos/4266944/pexels-photo-4266944.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Doctor speaking with a patient in a modern clinic" loading="lazy" decoding="async"></figure>
           <div class="intro-visual-side">
-            <figure class="media small"><img src="https://images.pexels.com/photos/7016405/pexels-photo-7016405.jpeg?auto=compress&cs=tinysrgb&w=2560" alt="Clean and modern medical clinic interior" loading="lazy" decoding="async"></figure>
+            <figure class="media small"><img src="https://images.pexels.com/photos/7016405/pexels-photo-7016405.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Clean and modern medical clinic interior" loading="lazy" decoding="async"></figure>
             <div class="frame-note"><strong>Close to home.</strong><span>Specialist eye care designed to feel less rushed and more understandable.</span></div>
           </div>
         </div>
@@ -493,14 +481,14 @@
     <section class="section-sm" style="padding-top:0">
       <div class="container">
         <div class="section-head">
-          <div><span class="eyebrow reveal"><span class="num">02</span> What matters here</span><h2 class="h2 reveal" data-delay="60">Four commitments that shape every visit.</h2></div>
+          <div><span class="eyebrow reveal">What matters here</span><h2 class="h2 reveal" data-delay="60">Four commitments that shape every visit.</h2></div>
           <p class="body-copy reveal" data-delay="100">The experience is designed around the patient first — before the equipment, before the terminology, and before the treatment plan.</p>
         </div>
         <div class="services-grid">
-          <article class="service-card reveal"><span class="service-num">01</span><div><h3>Unhurried consultations</h3><p>Time to understand the concern, ask questions and talk through what the findings mean.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
-          <article class="service-card reveal" data-delay="60"><span class="service-num">02</span><div><h3>Plain-language explanation</h3><p>Eye findings explained clearly, without expecting patients to navigate medical jargon alone.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
-          <article class="service-card reveal" data-delay="120"><span class="service-num">03</span><div><h3>Care shaped around you</h3><p>Recommendations discussed in context, with attention to the person's needs and priorities.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
-          <article class="service-card reveal" data-delay="180"><span class="service-num">04</span><div><h3>Continuity across visits</h3><p>A consistent approach to assessment, explanation and follow-up as care continues.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
+          <article class="service-card reveal"><div><h3>Unhurried consultations</h3><p>Time to understand the concern, ask questions and talk through what the findings mean.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
+          <article class="service-card reveal" data-delay="60"><div><h3>Plain-language explanation</h3><p>Eye findings explained clearly, without expecting patients to navigate medical jargon alone.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
+          <article class="service-card reveal" data-delay="120"><div><h3>Care shaped around you</h3><p>Recommendations discussed in context, with attention to the person's needs and priorities.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
+          <article class="service-card reveal" data-delay="180"><div><h3>Continuity across visits</h3><p>A consistent approach to assessment, explanation and follow-up as care continues.</p></div><span class="service-arrow" aria-hidden="true">↗</span></article>
         </div>
       </div>
     </section>
@@ -524,16 +512,16 @@
     <section class="section" id="services">
       <div class="container">
         <div class="section-head">
-          <div><span class="eyebrow reveal"><span class="num">03</span> Services</span><h2 class="h2 reveal" data-delay="60">Eye care, organised around what you need.</h2></div>
+          <div><span class="eyebrow reveal">Services</span><h2 class="h2 reveal" data-delay="60">Eye care, organised around what you need.</h2></div>
           <p class="body-copy reveal" data-delay="100">A focused service mix covering common vision concerns, ongoing eye health and comprehensive assessment.</p>
         </div>
         <div class="services-grid">
-          <article class="service-card reveal"><span class="service-num">01</span><div><h3>Cataract Evaluation &amp; Care</h3><p>Assessment of lens clouding and a clear, unhurried discussion of the options available to you.</p></div><a class="service-arrow" href="#contact" aria-label="Book cataract care">↗</a></article>
-          <article class="service-card reveal" data-delay="60"><span class="service-num">02</span><div><h3>LASIK &amp; Refractive Care</h3><p>Evaluation for people who would like to reduce their dependence on spectacles or contact lenses.</p></div><a class="service-arrow" href="#contact" aria-label="Book refractive care">↗</a></article>
-          <article class="service-card reveal" data-delay="120"><span class="service-num">03</span><div><h3>Glaucoma Care</h3><p>Regular monitoring and long-term follow-up for raised eye pressure and optic nerve health.</p></div><a class="service-arrow" href="#contact" aria-label="Book glaucoma care">↗</a></article>
-          <article class="service-card reveal" data-delay="180"><span class="service-num">04</span><div><h3>Retina Services</h3><p>Eye care focused on retinal health and the changes that need to be assessed and followed over time.</p></div><a class="service-arrow" href="#contact" aria-label="Book retina services">↗</a></article>
-          <article class="service-card reveal" data-delay="220"><span class="service-num">05</span><div><h3>Comprehensive Eye Examination</h3><p>A complete check of your vision and eye health — the right starting point for almost every concern.</p></div><a class="service-arrow" href="#contact" aria-label="Book an eye examination">↗</a></article>
-          <article class="service-card reveal" data-delay="280"><span class="service-num">06</span><div><h3>Diabetic Eye Check-up</h3><p>Assessment focused on retinal blood vessels and changes that may be worth tracking over time.</p></div><a class="service-arrow" href="#contact" aria-label="Book a diabetic eye check-up">↗</a></article>
+          <article class="service-card reveal"><div><h3>Cataract Evaluation &amp; Care</h3><p>Assessment of lens clouding and a clear, unhurried discussion of the options available to you.</p></div><a class="service-arrow" href="#contact" aria-label="Book cataract care">↗</a></article>
+          <article class="service-card reveal" data-delay="60"><div><h3>LASIK &amp; Refractive Care</h3><p>Evaluation for people who would like to reduce their dependence on spectacles or contact lenses.</p></div><a class="service-arrow" href="#contact" aria-label="Book refractive care">↗</a></article>
+          <article class="service-card reveal" data-delay="120"><div><h3>Glaucoma Care</h3><p>Regular monitoring and long-term follow-up for raised eye pressure and optic nerve health.</p></div><a class="service-arrow" href="#contact" aria-label="Book glaucoma care">↗</a></article>
+          <article class="service-card reveal" data-delay="180"><div><h3>Retina Services</h3><p>Eye care focused on retinal health and the changes that need to be assessed and followed over time.</p></div><a class="service-arrow" href="#contact" aria-label="Book retina services">↗</a></article>
+          <article class="service-card reveal" data-delay="220"><div><h3>Comprehensive Eye Examination</h3><p>A complete check of your vision and eye health — the right starting point for almost every concern.</p></div><a class="service-arrow" href="#contact" aria-label="Book an eye examination">↗</a></article>
+          <article class="service-card reveal" data-delay="280"><div><h3>Diabetic Eye Check-up</h3><p>Assessment focused on retinal blood vessels and changes that may be worth tracking over time.</p></div><a class="service-arrow" href="#contact" aria-label="Book a diabetic eye check-up">↗</a></article>
         </div>
         <p class="body-copy reveal" data-delay="120" style="margin-top:24px">Not sure which service you need? Start with a <a href="#contact" style="color:var(--teal);font-weight:800">comprehensive eye examination</a> and the team can guide the next step.</p>
       </div>
@@ -542,10 +530,10 @@
     <section class="section" id="doctor" style="padding-top:0">
       <div class="container doctor-grid">
         <figure class="media doctor-image reveal" data-parallax="0.025">
-          <img src="https://images.pexels.com/photos/32115957/pexels-photo-32115957.jpeg?auto=compress&cs=tinysrgb&w=3840" alt="Doctor in a modern clinic setting" loading="lazy" decoding="async">
+          <img src="https://images.pexels.com/photos/6749757/pexels-photo-6749757.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Doctor in a modern clinic setting" loading="lazy" decoding="async">
         </figure>
         <div class="doctor-copy">
-          <span class="eyebrow reveal"><span class="num">04</span> Consultation</span>
+          <span class="eyebrow reveal">Consultation</span>
           <h2 class="h2 reveal" data-delay="60">Dr. Chintan Gandhi</h2>
           <p class="doctor-role reveal" data-delay="100">Doctor at Sun Eye Hospital</p>
           <p class="body-copy reveal" data-delay="140">Patients at Sun Eye Hospital are seen by Dr. Chintan Gandhi. The consultation style is calm and explanatory — time is taken to answer questions before the next decision is made.</p>
@@ -562,12 +550,12 @@
     <section class="section technology" id="technology">
       <div class="container">
         <div class="section-head">
-          <div><span class="eyebrow reveal"><span class="num">05</span> Technology</span><h2 class="h2 reveal" data-delay="60">Tools that make explanations clearer.</h2></div>
+          <div><span class="eyebrow reveal">Technology</span><h2 class="h2 reveal" data-delay="60">Tools that make explanations clearer.</h2></div>
           <p class="body-copy reveal" data-delay="100">Equipment matters most when it makes an assessment more precise and an explanation easier to understand.</p>
         </div>
         <div class="tech-grid">
           <figure class="tech-feature reveal">
-            <img src="https://images.pexels.com/photos/5996650/pexels-photo-5996650.jpeg?auto=compress&cs=tinysrgb&w=3840" alt="Ophthalmologist using diagnostic equipment during an eye examination" loading="lazy" decoding="async">
+            <img src="https://images.pexels.com/photos/5996648/pexels-photo-5996648.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Ophthalmologist using diagnostic equipment during an eye examination" loading="lazy" decoding="async">
             <div class="tech-overlay"><span class="eyebrow">Diagnostic assessment</span><h3>See more. Explain more.</h3><p>Clear visual information helps clinicians examine carefully and walk patients through what they are seeing.</p></div>
           </figure>
           <div class="tech-list">
@@ -583,13 +571,13 @@
     <section class="section">
       <div class="container">
         <div class="section-head">
-          <div><span class="eyebrow reveal"><span class="num">06</span> The space</span><h2 class="h2 reveal" data-delay="60">A calm setting for a focused visit.</h2></div>
+          <div><span class="eyebrow reveal">The space</span><h2 class="h2 reveal" data-delay="60">A calm setting for a focused visit.</h2></div>
           <p class="body-copy reveal" data-delay="100">The visual language stays clean and quiet — generous space, soft light and considered details rather than a crowded medical interface.</p>
         </div>
         <div class="gallery">
-          <figure class="media g1 reveal"><img src="https://images.pexels.com/photos/31844508/pexels-photo-31844508.jpeg?auto=compress&cs=tinysrgb&w=3840" alt="Modern clinic reception area" loading="lazy" decoding="async"></figure>
-          <figure class="media g2 reveal" data-delay="80"><img src="https://images.pexels.com/photos/7108396/pexels-photo-7108396.jpeg?auto=compress&cs=tinysrgb&w=2560" alt="Clean medical clinic examination room" loading="lazy" decoding="async"></figure>
-          <figure class="media g3 reveal" data-delay="160"><img src="https://images.pexels.com/photos/6303645/pexels-photo-6303645.jpeg?auto=compress&cs=tinysrgb&w=2560" alt="Doctor and patient discussing a medical assessment" loading="lazy" decoding="async"></figure>
+          <figure class="media g1 reveal"><img src="https://images.pexels.com/photos/31844508/pexels-photo-31844508.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Modern clinic reception area" loading="lazy" decoding="async"></figure>
+          <figure class="media g2 reveal" data-delay="80"><img src="https://images.pexels.com/photos/7108332/pexels-photo-7108332.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Clean medical clinic examination room" loading="lazy" decoding="async"></figure>
+          <figure class="media g3 reveal" data-delay="160"><img src="https://images.pexels.com/photos/6749742/pexels-photo-6749742.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Doctor and patient discussing a medical assessment" loading="lazy" decoding="async"></figure>
         </div>
         <p class="gallery-caption reveal" data-delay="200">Photography shown here is illustrative Pexels imagery selected to match the intended visual direction. Replace with the hospital's own photographs when available.</p>
       </div>
@@ -598,7 +586,7 @@
     <section class="section-sm" id="contact">
       <div class="container contact-grid">
         <div class="contact-copy">
-          <span class="eyebrow reveal"><span class="num">07</span> Contact &amp; appointments</span>
+          <span class="eyebrow reveal">Contact &amp; appointments</span>
           <h2 class="h2 reveal" data-delay="60">Come and see us in Bilimora.</h2>
           <p class="body-copy reveal" data-delay="120">Share a few details below. Your request will open WhatsApp with the information already prepared, so the hospital team can continue the conversation directly.</p>
           <div class="info-list">
@@ -631,9 +619,6 @@
               </div>
             </form>
           </div>
-          <div class="map reveal" data-delay="160" aria-label="Map showing Sun Eye Hospital, Bilimora">
-            <iframe title="Sun Eye Hospital location" src="https://www.google.com/maps?q=Sun%20Eye%20Hospital%2C%20Convent%20Road%2C%20Somnath%20Rd%2C%20Goharbaug%2C%20Bilimora%2C%20Gujarat%20396321&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
         </div>
       </div>
     </section>
@@ -653,7 +638,7 @@
         </div>
         <div class="footer-col"><h4>Explore</h4><div class="footer-links"><a href="#about">About</a><a href="#services">Services</a><a href="#doctor">Doctor</a><a href="#technology">Technology</a><a href="#contact">Contact</a></div></div>
         <div class="footer-col"><h4>Services</h4><div class="footer-links"><a href="#services">Cataract Care</a><a href="#services">LASIK &amp; Refractive</a><a href="#services">Glaucoma Care</a><a href="#services">Retina Services</a><a href="#services">Eye Examination</a></div></div>
-        <div class="footer-col"><h4>Visit</h4><div class="footer-contact"><div>Convent Road, Somnath Rd,<br>Goharbaug, Bilimora,<br>Gujarat 396321</div><a href="tel:+919106898770">091068 98770</a><div>Open today · Closes 7:00 PM</div></div></div>
+        <div class="footer-col"><h4>Visit</h4><div class="footer-contact"><div>Convent Road, Somnath Rd,<br>Goharbaug, Bilimora,<br>Gujarat 396321</div><a href="tel:+919106898770">091068 98770</a><div>Open today · Closes 7:00 PM</div></div><div class="map footer-map" aria-label="Map showing Sun Eye Hospital, Bilimora"><iframe title="Sun Eye Hospital location" src="https://www.google.com/maps?q=Sun%20Eye%20Hospital%2C%20Convent%20Road%2C%20Somnath%20Rd%2C%20Goharbaug%2C%20Bilimora%2C%20Gujarat%20396321&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div>
       </div>
       <div class="footer-bottom"><span>© 2026 Sun Eye Hospital. All rights reserved.</span><span>Bilimora · Gujarat</span></div>
     </div>
